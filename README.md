@@ -1,2 +1,2 @@
-# PlatziVideo :tw-1f49a:
+# PlatziVideo 💚
 Es un proyecto construido con bases de HTML5, CSS3 y Javascript. Se desarrolló gracias al cruso de **Frontend Developer** de la **Escuela de Javascript** en [**Platzi.com**](http://platzi.com/javascript "**Platzi.com**")
