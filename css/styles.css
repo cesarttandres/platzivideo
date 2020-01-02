@@ -152,7 +152,15 @@ body {
 
 .carousel-item__details--icons img{
 
-    width: 25px;
+    width: 15px;
+    margin-right: 2px;
+    transition: 450ms all;
+
+}
+
+.carousel-item__details--icons img:hover {
+
+    transform: scale(1.2);
 
 }
 
@@ -179,6 +187,13 @@ body {
 .carousel-item__details:hover {
 
     opacity: 1;
+
+}
+
+.carousel-item__details--title {
+
+    font-weight: bold;
+    font-size: 15px;
 
 }
 
