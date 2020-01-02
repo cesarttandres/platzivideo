@@ -69,11 +69,14 @@ body {
 .buscador {
     height: 300px;
     font-family: 'Roboto', sans-serif;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-        .buscador__title {
-           color: white;
-           font-size: 25px;
+.buscador__title {
+    color: white;
+    font-size: 25px;
+    display: flex;
         }
 
         .input {
@@ -86,7 +89,6 @@ body {
             padding: 13px;
             width: 70%;
             outline: none;
-
         }
 
 h2 {
