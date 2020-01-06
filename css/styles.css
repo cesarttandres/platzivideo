@@ -80,13 +80,13 @@ body {
     align-items: center;
     margin-bottom: 30px;
 }
-.buscador__title {
-    color: white;
-    font-size: 25px;
-    display: flex;
+    .buscador__title {
+        color: white;
+        font-size: 25px;
+        display: flex;
         }
 
-        .input {
+        .buscador__title .input {
 
             background-color: rgba(255, 255, 255, 0.1);
             border: 2px solid white;
@@ -99,6 +99,17 @@ body {
             cursor: auto;
         }
 
+        .buscador__title .input::placeholder {
+
+            color: white;
+            margin-left: 30px;
+        
+        }
+
+
+
+        }
+
 .carousel {
 
     width: 100%;
@@ -109,128 +120,333 @@ body {
     overflow-y: hidden;
 }
 
-.carousel::-webkit-scrollbar {
+        .carousel::-webkit-scrollbar {
 
-    width: 12px;
+            width: 12px;
+
+        }
+
+        .carousel::-webkit-scrollbar-track {
+
+            background: rgba(0, 0, 0, 0.0);
+            margin-left: 30px;
+            border-radius: 20px;
+
+        }
+
+        .carousel::-webkit-scrollbar-thumb {
+
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+
+        }
+
+
+        .carousel__container {
+            
+            white-space: nowrap;
+            margin: 40px 0px 60px 0px;
+            padding-bottom: 10px;
+            
+        }
+
+        .carousel-item:last-child {
+
+            margin-right: 190px;
+
+        }
+
+        .carousel-item {
+
+            border-radius: 20px;
+            position: relative;
+            width: 200px;
+            height: 250px;
+            background-color: chartreuse;
+            overflow: hidden;
+            margin-right: 10px;
+            display: inline-block;
+            cursor: pointer;
+            transition: 450ms all;
+            transform-origin: center left;
+        }
+
+
+        .carousel-item:hover ~ .carousel-item {
+
+            transform: translate3d(100px, 0, 0);
+
+        }
+
+        .carousel__container:hover .carousel-item {
+
+            opacity: 0.3;
+
+        }
+
+        .carousel__container:hover .carousel-item:hover {
+
+            transform: scale(1.5);
+            opacity: 1;
+
+        }
+
+        .carousel-item__img {
+
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+
+        }
+
+        .carousel-item__details--icons img{
+
+            width: 15px;
+            margin-right: 2px;
+            transition: 450ms all;
+
+        }
+
+        .carousel-item__details--icons img:hover {
+
+            transform: scale(1.2);
+
+        }
+
+        .carousel-item__details {
+
+            background: linear-gradient(to top, rgba(0 ,0 ,0 ,0.9) 0%, rgba(0 , 0, 0, 0) 100%);
+            font-size: 10px;
+            opacity: 0;
+            transition: 450ms opacity;
+            padding: 15px;
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            bottom: 0;
+            color: white;
+            width: 200px;
+            height: 250px;
+            box-sizing: border-box;
+        }
+
+        .carousel-item__details:hover {
+
+            opacity: 1;
+
+        }
+
+        .carousel-item__details--title {
+
+            font-weight: bold;
+            font-size: 15px;
+
+        }
+
+        /* LOGIN STYLES */
+
+.login {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0px;
+    min-height: calc(100vh - 200px);
 
 }
 
-.carousel::-webkit-scrollbar-track {
+.login__container {
 
-    background: rgba(0, 0, 0, 0.0);
-    margin-left: 30px;
     border-radius: 20px;
+    padding: 30px;
+    min-height: 300px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.13);
 
 }
 
-.carousel::-webkit-scrollbar-thumb {
+.login__container form {
 
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 
 }
 
+.login__container--form label {
 
-.carousel__container {
+    display: flex;
+    align-items: center;
+
+}
+
+.login__container--form label input {
+
+    margin-right: 3px;
+
+}
+
+.login__container--remember-me {
+
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+.login__container--remember-me a {
     
-    white-space: nowrap;
-    margin: 40px 0px 60px 0px;
-    padding-bottom: 10px;
+    color: white;
+    text-decoration: none;
+
+}
+.login__container--remember-me a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.social-media--items {
     
+    display: flex;
+    justify-content: center;
 }
 
-.carousel-item:last-child {
-
-    margin-right: 190px;
-
-}
-
-.carousel-item {
-
-    border-radius: 20px;
-    position: relative;
-    width: 200px;
-    height: 250px;
-    background-color: chartreuse;
-    overflow: hidden;
-    margin-right: 10px;
-    display: inline-block;
+.social-media--items > div{
+    
+    background: white;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 100px;
     cursor: pointer;
+    margin: 20px 5px;
     transition: 450ms all;
-    transform-origin: center left;
+    box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.25);
+
+    
 }
 
-
-.carousel-item:hover ~ .carousel-item {
-
-    transform: translate3d(100px, 0, 0);
-
-}
-
-.carousel__container:hover .carousel-item {
-
-    opacity: 0.3;
-
-}
-
-.carousel__container:hover .carousel-item:hover {
-
-    transform: scale(1.5);
-    opacity: 1;
-
-}
-
-.carousel-item__img {
-
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
-
-}
-
-.carousel-item__details--icons img{
-
-    width: 15px;
-    margin-right: 2px;
-    transition: 450ms all;
-
-}
-
-.carousel-item__details--icons img:hover {
+.social-media--items > div:hover {
 
     transform: scale(1.2);
 
 }
 
-.carousel-item__details {
+.login-social-media--google, .login-social-media--twitter{
 
-    background: linear-gradient(to top, rgba(0 ,0 ,0 ,0.9) 0%, rgba(0 , 0, 0, 0) 100%);
-    font-size: 10px;
-    opacity: 0;
-    transition: 450ms opacity;
-    padding: 15px;
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    bottom: 0;
+    width: 20px;
+    object-fit: cover;
+
+}
+
+.login__container--register {
+
+    font-size: 14px;
     color: white;
-    width: 200px;
-    height: 250px;
-    box-sizing: border-box;
-}
-
-.carousel-item__details:hover {
-
-    opacity: 1;
+    display: flex;
+    justify-content: center;
 
 }
 
-.carousel-item__details--title {
+.login__container--register a {
 
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
     font-weight: bold;
-    font-size: 15px;
+
+}
+
+.login__container--register a:hover {
+
+    text-decoration: underline;
+
+}
+
+.input {
+
+    background-color: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    color: white;
+    
+}
+
+.input::placeholder {
+    
+    color: white;
+    font-size: 16px;
+    opacity: 0.2;
+
+}
+
+.button {
+
+    background-color: rgba(255, 255, 255, 0.1) ;
+    border-radius: 25px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: 0px;
+    margin: 10px 0px;
+    transition: 350ms all;
+    outline: none;
+
+}
+
+.button:hover {
+
+    transform: scale(1.05);
+
+}
+
+.button:active {
+
+    transform: scale(0.8);
+
+}
+
+.footer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    widows: 100px;
+
+}
+
+.footer > a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding-right: 30px;
+    cursor: pointer;
+
+}
+
+.footer > a:last-child {
+
+    padding-right: 0px;
+
+}
+
+.footer > a:hover {
+
+    text-decoration: underline;
 
 }
 
@@ -249,9 +465,3 @@ h3 {
 
 }
 
-::placeholder {
-
-    color: white;
-    margin-left: 30px;
-
-}
